@@ -1,7 +1,7 @@
 <?php
 $options= array(
-  'location' 	=>	'http://localhost/Taller1soap/soapserver.php',
-  'uri'		=>	'http://localhost/Taller1soap/soapserver.php'
+  'location' 	=>	'http://localhost/taller-1-main/soapserver.php',
+  'uri'		=>	'http://localhost/taller-1-main/soapserver.php'
 );
 $client=new SoapClient(NULL,$options);
 ?>

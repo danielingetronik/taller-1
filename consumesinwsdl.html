@@ -7,11 +7,20 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script >
+        var num1 = 0;
+        var num2 = 0;
+        function captura(){
+            alert( "ff");
+           num1 = document.getElementById("num1").value;
+           num2 = document.getElementById("num2").value;
+        }
+        
         $.ajax({
             type: "POST",
             url: "cliente.php",
             dataType: "json", 
-            data: {"nombre":"jheison Andres"},
+            data: {"nombre":"jheison Andres","num1":num1,"num2":num2
+        },
         }).done(function(data){
             console.log(data.respuesta)
             $('#list').html(data.respuesta);	
@@ -20,11 +29,14 @@
     </script>
 </head>
 <body>
+    <input id="num1" type="text" placeholder="numero1">
+        <input id="num2" type="text" placeholder="numero2">
+
     <div id="list">
         
     </div>	
 
-
+<button onclick="captura()">boton 1</button>
 
 </body>
 </html>

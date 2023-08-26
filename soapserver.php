@@ -24,7 +24,7 @@ class MiPrimerSoap
   }
 }
 
-$options= array('uri'=>'http://localhost/Taller1soap');
+$options= array('uri'=>'http://localhost/taller-1-main');
 $server=new SoapServer(NULL,$options);
 $server->setClass('MiPrimerSoap');
 $server->handle();
